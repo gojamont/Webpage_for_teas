@@ -2,8 +2,52 @@ div {
     text-align: center;
 }
 
-#navbar li{
+.navbar{
+    background-color: rgba(70, 200, 70, 0.285);
+    padding: 10px 0; 
+}
+.navbar ul {
+    text-decoration: none;
+    padding: 0;
+}
+
+.navbar li{
     display: inline;
     padding: 20px;
-    margin: 10px;
 }
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+   color: rgb(19, 176, 153);
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    width: 100vw; /* 100% viewport width for full-width container */
+    height: 60vh; /* 100% viewport height for full-height container */
+    font-size: 50px;
+    color: olivedrab;
+}
+h2 {
+    font-size: 30px;
+    text-align: center;
+    color: olive;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-item 
+{
+    padding: 5px;
+    margin: 5px;
+}
+
