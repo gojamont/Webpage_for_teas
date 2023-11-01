@@ -3,7 +3,6 @@ div {
 }
 
 .navbar{
-    background-color: rgba(70, 200, 70, 0.285);
     padding: 10px 0; 
 }
 .navbar ul {
@@ -30,7 +29,7 @@ a:hover{
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     width: 100vw; /* 100% viewport width for full-width container */
-    height: 60vh; /* 100% viewport height for full-height container */
+    height: 90vh; /* 100% viewport height for full-height container */
     font-size: 50px;
     color: olivedrab;
 }
@@ -42,12 +41,18 @@ h2 {
 
 .grid-container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Single column for the grid */
+    grid-gap: 10px;
     justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-}
-.grid-item 
-{
-    padding: 5px;
-    margin: 5px;
+    padding: 10px;
+    width: 100%;
+    overflow: hidden; /* Hide any overflowing content */
 }
 
+.image {
+    transition: color 0.3s; /* Add a smooth transition for color change */
+}
+
+.image:hover {
+    opacity: 70%;/* Change the color on hover */
+}
