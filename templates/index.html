@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html lang="lt">
-    <head>
-        <link rel="stylesheet" href="\static\styles.css">
-        <title> Renatos Sodai</title>
-    </head>
-    <body>
-        <div class="navbar">
-            <ul>
-                <li><a href="apiemus.html"> Apie Mus </a></li>
-                <li><a href="index.html"> Pagrindinis Puslapis </a></li>
-                <li><a href="kainos.html"> Kainos </a></li>
-                <li><a href="meniu.html"> Arbatų programų meniu </a></li>
-                <li><a href="kontaktai.html"> Kontaktai </a></li>
-            </ul>
-        </div>
-        <div class="container">
+{% extends "layout.html" %}
+
+{% block title %}
+    Pagrindinis Meniu
+{% endblock %}
+
+{% block main %}
+<form action="/">
+    <div class="container">
             Sveiki atvykę į arbatos pasaulį!
-        </div>
-        <h2> Edukacinės programos </h2>
-        <div class="grid-container">
-            <div><img class="image" src="meta.jpg" alt="Mėtos"></div>
-            <div><img class="image" src="lapukai_2.jpg" alt="Lapukai"></div>
-            <div><img class="image" src="ulongas.jpg" alt="Ulongas"></div>
-        </div>
-    </body>
-</html>
+    </div>
+    <h2> Edukacinės programos </h2>
+    <div class="grid-container">
+        <div><img class="image" src="meta.jpg" alt="Mėtos"></div>
+        <div><img class="image" src="lapukai_2.jpg" alt="Lapukai"></div>
+        <div><img class="image" src="ulongas.jpg" alt="Ulongas"></div>
+    </div>
+</form>
+{% endblock %}

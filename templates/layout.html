@@ -1,0 +1,23 @@
+<doctype! html>
+<html lang ="lt">
+    <title>{% block title %}{% endblock %}</title>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name=”viewport” content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="\static\styles.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="apiemus.html"> Apie Mus </a></li>
+                <li><a href="index.html"> Pagrindinis Puslapis </a></li>
+                <li><a href="kainos.html"> Kainos </a></li>
+                <li><a href="meniu.html"> Arbatų programų meniu </a></li>
+                <li><a href="kontaktai.html"> Kontaktai </a></li>
+            </ul>
+        </div>
+        <main class="container-fluid py-5 text-center">
+            {% block main %}{% endblock %}
+        </main>
+    </body>
+</html>
