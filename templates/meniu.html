@@ -6,71 +6,12 @@
 
 {% block main %}
   <form action="/meniu">
-    <div class="container">
-      <h2>Edukacinės programos</h2>
-	  <br>
-      <div id="description" >
-		<h3>Vaistas ir maistas visada šalia</h3>   <!-- Maistas ir vaistas šalia -- 1 edukacinė --> 
-        <p>
-            Edukacinė programa pravedama tik gegužės- rugsėjo mėn.
-
-		Ši edukacinė programa skirta skirtingo amžiaus žmonėms. Jos metu vaikai
-		ir suaugusieji susipažins su mus supančiuose laukuose ir pievose
-		augančiais augalais. Sužinos augalų naudingasiais savybes išmoks juos
-		pažinti ir panaudoti tiek kasdieniniame gyvenime tik ir ištikus bėdai.
-		Sužinos kaip teisingai rinkti ir paruošti naudojimui bei saugojimui turimus
-		augalus.
-
-		Programoje dalyvaujantys žmonės turės galimybę pasigaminti ir
-		paragauti žolių salotų, užtepo ant duonos, kiaušinienės su žolėmis,
-		užsivirti arbatos iš surinktų augalų.
-        </p>
-		<p>
-			Numatoma programos trukmė <b>2,5-3val.</b>
-			Programa pravedama grupėms nuo <b>8 iki 25 </b> žmonių.
-			Programos kaina <b>10€</b> suaugusiam žmogui ir <b>5€</b> vaikui.
-		</p>
-      </div>
-	  <div id="description">
-		<h3> Vaistažolės prie namų </h3> <!--  Vaistažolės prie namų -- 2 edukacinė --> 
-		<p>
-			Programa pravedama visus metus, vasaros metu naudojami švieži augalai, žiemos metu džiovinti.
-		</p>
-		<p>
-			Ši edukacinė programa skirta skirtingo amžiaus žmonėms.
-			Programos metu dalyviai susipažins su populiariausiais,
-			dažniausiai auginamai daržo, darželio, gėlyno augalais kuriuos
-			galima naudoti dažnai pasitaikančių ligų gydymui. Sužinos kaip
-			teisingai rinkti ir paruošti naudojimui bei saugojimui turimus
-			augalus. Susipažins su kitomis šių augalų panaudojimo
-			galimybėmis.
-		</p>
-		<p>
-			Programoje dalyvaujantys žmonės turės galimybę paragauti
-			skirtingų augalų arbatos ir įvertinti jų skonines savybes.
-		</p>
-		<p>
-			Numatoma programos trukmė <b> 2-2,5val.</b>
-			Programa pravedama grupėms nuo <b> 8 iki 25 </b> žmonių.
-			Programos kaina <b>5€</b> suaugusiam žmogui ir <b>2€</b> vaikui.
-
-		</p>
-	  </div>
-	  <div id="description">
-		<h3> Bobvakariai </h3> <!--  Bobvakariai -- 3 edukacinė --> 
-		<p>
-			Į Bobvakarius kviečiame moteris, norinčias, gamtos apsuptyje, pasilsėti
-			nuo kasdienybės, išsimaudyti pirtyje su žolėmis, pasiperti žolinėmis
-			vantomis, susipažinti su žolių panaudojimu grožio procedūrose ir
-			pasimėgauti vaistažolių arbatomis.
-			Laukiamos <b>5-10</b> moterų grupės.
-		</p>
-		<p>
-			Programos kaina vienam asmeniui <b>10€</b>.
-			Programos trukmė <b>2-3val</b>.
-		</p>
-
-	  </div>
+    <div id="meniu">
+		<ul>
+			<li><a href="{{ url_for('edu_1') }}"> Vaistas ir maistas šalia namų</a></li>
+			<li><a href="{{ url_for('edu_2') }}"> Vaistažolės prie namų </a></li>
+			<li><a href="{{ url_for('edu_3') }}"> Bobvakariai </a></li>
+		</ul>
     </div>
   </form>
 {% endblock %}

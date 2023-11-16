@@ -16,7 +16,7 @@ div {
 
 /* Navigation Styles */
 .navbar {
-    padding: 10px 0;
+    padding: 10px 10px;
 }
 
 .navbar ul {
@@ -28,14 +28,37 @@ div {
     display: inline;
     padding: 20px;
 }
-
 .navbar a {
     text-decoration: none;
     color: black;
+    position: relative; /* Set position relative for absolute positioning of the underline */
+}
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust the distance between letters and underline */
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid transparent; /* Initial transparent underline */
+    transition: border-bottom 0.5s, color 0.5s; /* Add transitions for a smooth effect */
 }
 
-a:hover {
-    color: rgb(19, 176, 153);
+.navbar a:hover::after {
+    border-bottom: 1px solid rgb(19, 176, 153); /* Color of the underline on hover */
+}
+
+#meniu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Optionally center the child elements horizontally */
+}
+
+#meniu ul {
+    list-style-type: none;
+    font-size: 20px;
+    display: inline-block;
 }
 
 /* Layout Styles */
@@ -72,7 +95,7 @@ h2 {
 }
 
 /* Grid and Flexbox Styles */
-.grid-container {
+.grid-container, #meniu ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
