@@ -7,13 +7,15 @@
 {% block main %}
 <form action="/">
     <div class="container">
+        <div id="header">
             Sveiki atvykę į arbatos pasaulį!
+        </div>
     </div>
     <h2> Edukacinės programos </h2>
     <div class="grid-container">
-        <div><img class="image" src="meta.jpg" alt="Mėtos"></div>
-        <div><img class="image" src="lapukai_2.jpg" alt="Lapukai"></div>
-        <div><img class="image" src="ulongas.jpg" alt="Ulongas"></div>
-    </div>
+        <div><img class="image" src="{{ url_for('static', filename='meta.jpg') }}" alt="Mėtos"></div>
+        <div><img class="image" src="{{ url_for('static', filename='lapukai_2.jpg') }}" alt="Lapukai"></div>
+        <div><img class="image" src="{{ url_for('static', filename='ulongas.jpg') }}" alt="Ulongas"></div>
+    </div>    
 </form>
 {% endblock %}
