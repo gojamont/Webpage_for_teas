@@ -23,10 +23,15 @@
                     </div>
                 </div>
                 <li><a href="{{ url_for('kontaktai') }}"> Kontaktai </a></li>
+                <li><a href="#"> Galerija </a></li>
             </ul>
         </div>
         <main class="container-fluid py-5 text-center">
-            {% block main %}{% endblock %}
+            {% block main %}{% endblock %} 
         </main>
+        <footer> 
+            <p><i class="fa fa-facebook" aria-hidden="true"></i> Sekite mus FB puslapyje!</p>
+            <p><i class="fa fa-phone" aria-hidden="true"></i> Susisiekite tel.nr +37061582040</p>
+        </footer>
     </body>
 </html>

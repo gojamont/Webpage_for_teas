@@ -2,11 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    min-height: 100%;
+    margin: 0;
+}
+
 /* Reset and General Styles */
 div {
     text-align: center;
     margin: 30px;
+    line-height: 1.5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,11 +56,10 @@ div {
 }
 
 #meniu {
-    position: absolute;
+    align-items: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; /* Optionally center the child elements horizontally */
+    text-align: center;
 }
 
 #meniu ul {
@@ -54,10 +67,17 @@ div {
     font-size: 20px;
     display: inline-block;
 }
+
+#meniu li {
+    display: block;
+    margin-bottom: 10px; /* Add some spacing between list items */
+}
+
 #meniu a {
     text-decoration: none;
-    color:darkgreen;
+    color: darkgreen;
 }
+
 #meniu a:hover {
     color: rgba(145, 72, 13);
 }
@@ -105,10 +125,32 @@ div {
 
 /* Layout Styles */
 .container {
-    width: 100vw;
-    margin-top: 15px;
-    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+    /* Style to display image and text side by side */
+    .img-container {
+      display: grid;
+      height: 500px;
+      grid-template-columns: 1fr 1fr;
+      width: 80%;
+    }
+
+    /* Style for the image within the container */
+    .img-container img {
+      height: 300px;
+      width: 350px;
+      border-radius: 10%;
+    }
+
+    /* Style for the text within the container */
+    .img-container p {
+      text-align: right;
+      font-size: 20px;
+      margin: 20px;
+      color: olive;
+    }
 #header {
     font-size: 50px;
     color: olive; /* Correct color name */
@@ -140,11 +182,11 @@ h2 {
 .grid-container, #meniu ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 5px;
     justify-content: center;
-    padding: 10px;
+    margin: 2px;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* Hover and Transition Styles */
@@ -154,4 +196,14 @@ h2 {
 
 .image:hover {
     opacity: 0.7; /* Change the opacity on hover */
+}
+
+footer {
+    padding: 10px;
+    width: 100%;
+    position: sticky;
+    text-align: center;
+    color: green;
+    bottom: 0;
+    border-top: 1px solid green;
 }

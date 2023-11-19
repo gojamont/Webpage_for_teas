@@ -5,25 +5,33 @@
 {% endblock %}
 
 {% block main %}
-  <form action="/meniu">
-    <div id="meniu">
-		<ul>
-			<li>
-        <div><i class="fa fa-pagelines" aria-hidden="true"></i></div>
-        <a href="{{ url_for('edu_1') }}"> Vaistas ir maistas šalia namų</a>
-        
-      </li>
-			<li>
-        <div>
-          <i class="fa fa-pagelines" aria-hidden="true"></i>
-        </div>
-        <a href="{{ url_for('edu_2') }}"> Vaistažolės prie namų </a></li>
-			<li>
-        <div>
-            <i class="fa fa-pagelines" aria-hidden="true"></i>
-        </div>
-        <a href="{{ url_for('edu_3') }}"> Bobvakariai </a></li>
-		</ul>
+<form action="/meniu">
+  <div class="container">
+      <div id="meniu">
+        <ul>
+          <li>
+            <div>
+              <img src="static\vaistazoles.jpg" alt="Vaistažolės" width="250" height="250" style="border-radius: 50%; margin: 20px;">
+              <i class="fa fa-pagelines"></i>
+              <a href="{{ url_for('edu_1') }}"> Vaistas ir maistas šalia namų</a>
+          </div>
+          </li>
+          <li>
+            <div>
+              <img src="static\vaistazoles_1.jpg" alt="Vaistažolės" width="250" height="250" style="border-radius: 50%; margin: 20px;"> 
+              <i class="fa fa-pagelines"></i>
+              <a href="{{ url_for('edu_2') }}"> Vaistažolės prie namų </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="static\bobvakaris.jpg" alt="bobvakaris" width="250" height="250" style="border-radius: 50%; margin: 20px;"> 
+              <i class="fa fa-pagelines"></i>
+            <a href="{{ url_for('edu_3') }}"> Bobvakariai </a>
+          </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </form>
 {% endblock %}
