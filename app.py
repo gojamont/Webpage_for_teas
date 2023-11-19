@@ -22,6 +22,10 @@ def edu_2():
 def edu_3():
     return render_template("bobvakariai.html")
 
+@app.route('/apiemus')
+def intro():
+    return render_template("apiemus.html")
+
 @app.route('/kontaktai')
 def kontaktai():
     return render_template("kontaktai.html")

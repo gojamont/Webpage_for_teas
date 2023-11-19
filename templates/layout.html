@@ -5,13 +5,23 @@
         <meta charset = "UTF-8">
         <meta name=”viewport” content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="\static\styles.css">
+        <link rel="stylesheet" href="static\font-awesome\css\font-awesome.min.css">
     </head>
     <body>
         <div class="navbar">
             <ul>
-                <li><a href="apiemus.html"> Apie Mus </a></li>
-                <li><a href="{{ url_for('index') }}"> Pagrindinis Puslapis </a></li>
-                <li><a href="{{ url_for('meniu') }}"> Arbatų programų meniu </a></li>
+                <li><a href="{{ url_for('index') }}"><img src="static\icon.png" height="80px" width="100px"></a></li>
+                <li><a href="{{ url_for('intro') }}"> Apie Mus </a></li>
+                <div class="dropdown">
+                    <li><button class="dropdown_btn"><a href="{{ url_for('meniu') }}"> Arbatų programų meniu </a>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </button></li>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('edu_1') }}"> Vaistas ir maistas šalia </a>
+                        <a href="{{ url_for('edu_2') }}"> Vaistažolės prie namų </a>
+                        <a href="{{ url_for('edu_3') }}"> Bobvakariai </a>
+                    </div>
+                </div>
                 <li><a href="{{ url_for('kontaktai') }}"> Kontaktai </a></li>
             </ul>
         </div>

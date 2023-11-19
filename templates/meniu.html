@@ -8,9 +8,21 @@
   <form action="/meniu">
     <div id="meniu">
 		<ul>
-			<li><a href="{{ url_for('edu_1') }}"> Vaistas ir maistas šalia namų</a></li>
-			<li><a href="{{ url_for('edu_2') }}"> Vaistažolės prie namų </a></li>
-			<li><a href="{{ url_for('edu_3') }}"> Bobvakariai </a></li>
+			<li>
+        <div><i class="fa fa-pagelines" aria-hidden="true"></i></div>
+        <a href="{{ url_for('edu_1') }}"> Vaistas ir maistas šalia namų</a>
+        
+      </li>
+			<li>
+        <div>
+          <i class="fa fa-pagelines" aria-hidden="true"></i>
+        </div>
+        <a href="{{ url_for('edu_2') }}"> Vaistažolės prie namų </a></li>
+			<li>
+        <div>
+            <i class="fa fa-pagelines" aria-hidden="true"></i>
+        </div>
+        <a href="{{ url_for('edu_3') }}"> Bobvakariai </a></li>
 		</ul>
     </div>
   </form>
