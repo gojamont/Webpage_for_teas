@@ -5,19 +5,25 @@
 {% endblock %}
 
 {% block main %}
+<style>
+	main {background-image: url("static/sauna.jpg");
+		  background-size: cover;
+		  };
+</style>
   <form action="/bobvakariai">
-    <div class="container">
-	  <div id="description">
-		<h3> Bobvakariai </h3> <!--  Bobvakariai -- 3 edukacinė --> 
+    <div class="container" style="height: 50vw; width: 50vw; float: left; backdrop-filter: blur(5px);">
+	  <div id="description" style="color: white;">
+		<h2 style="color: white; font-size: 40px; overflow: hidden;"> Bobvakariai </h2> <!--  Bobvakariai -- 3 edukacinė --> 
 		<p>
-			Į Bobvakarius kviečiame moteris, norinčias, gamtos apsuptyje, pasilsėti
+			Į Bobvakarius kviečiame moteris, norinčias, gamtos apsuptyje, pailsėti
 			nuo kasdienybės, išsimaudyti pirtyje su žolėmis, pasiperti žolinėmis
 			vantomis, susipažinti su žolių panaudojimu grožio procedūrose ir
 			pasimėgauti vaistažolių arbatomis.
+			<br><br>
 			Laukiamos <b>5-10</b> moterų grupės.
-		</p>
-		<p>
+			<br>
 			Programos kaina vienam asmeniui <b>10€</b>.
+			<br>
 			Programos trukmė <b>2-3val</b>.
 		</p>
 	  </div>

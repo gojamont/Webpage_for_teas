@@ -11,9 +11,6 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    text-align: justify;
-    min-height: 100%;
-    margin: 0;
 }
 
 /* Reset and General Styles */
@@ -29,14 +26,23 @@ div {
 
 /* Navigation Styles */
 .navbar {
-    padding: 10px 10px;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid green;
+    margin: 0;
+}
+.logo {
+    margin: 5px; /* Adjust margin as needed */
+}
+.logo img{
+    height: 150px;
+    width: 200px;
 }
 
 .navbar ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
     text-decoration: none;
     padding: 0;
 }
@@ -44,7 +50,6 @@ div {
 .navbar li {
     display: inline;
     padding: 20px;
-    margin: 0 10px;
 }
 .navbar a {
     text-decoration: none;
@@ -52,7 +57,7 @@ div {
     position: relative; /* Set position relative for absolute positioning of the underline */
 }
 .navbar a:hover {
-    color: rgb(78, 104, 26);
+    color: green;
 }
 
 #meniu {
@@ -94,7 +99,6 @@ div {
     font-size: 16px;
     border: none;
     color: black;
-    padding: 14px 16px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
@@ -109,14 +113,14 @@ div {
   }
   
   /* Links inside the dropdown */
-  .dropdown-content a {
+  /*.dropdown-content a {
     float: none;
     color: black;
     padding:20px 40px;
     text-decoration: none;
     display: block;
     text-align: left;
-  }
+  } */
   
   /* Add a grey background color to dropdown links on hover */
   .dropdown-content a:hover {
@@ -130,42 +134,43 @@ div {
     justify-content: center;
 }
     /* Style to display image and text side by side */
-    .img-container {
-      display: grid;
-      height: 500px;
-      grid-template-columns: 1fr 1fr;
-      width: 80%;
-    }
+.img-container {
+    display: grid;
+    height: 500px;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+}
+.img-container img,
+.img-container p {
+    display: inline-block;
+}
 
     /* Style for the image within the container */
-    .img-container img {
-      height: 300px;
-      width: 350px;
-      border-radius: 10%;
-    }
+.img-container img {
+    height: 300px;
+    width: 350px;
+    border-radius: 10%;
+}
 
-    /* Style for the text within the container */
-    .img-container p {
-      text-align: right;
-      font-size: 20px;
-      margin: 20px;
-      color: olive;
-    }
+/* Style for the text within the container */
+.img-container p {
+    text-align: justify;
+    font-size: 20px;
+    color: olive;
+}
+
 #header {
-    font-size: 50px;
-    color: olive; /* Correct color name */
-    height: 90vh;
+font-size: 50px;
+height: 90vh;
+margin-bottom: 20px;
+color: olive; /* Correct color name */
+
 }
 #description {
-    margin: 20px;
-    padding: 5px;
-    height: 200px;
-    width: 70%;
-    box-sizing: border-box;
-    font-size: 18px;
+    left: 0;
+    margin: 0px 20px;
+    font-size: 25px;
     line-height: 1.5em;
-    text-align: justify;
-    color: rgba(90, 58, 34, 0.73);
 }
 p {
     margin: 0; /* Add this rule to reset the margin for paragraphs */
@@ -182,9 +187,9 @@ h2 {
 .grid-container, #meniu ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
     justify-content: center;
-    margin: 2px;
+    align-items: center;
+    margin: 5px;
     width: 100%;
     overflow-x: hidden;
 }
@@ -199,11 +204,37 @@ h2 {
 }
 
 footer {
-    padding: 10px;
     width: 100%;
     position: sticky;
     text-align: center;
-    color: green;
+    color: white;
+    background-color: rgba(34,88,49);
     bottom: 0;
-    border-top: 1px solid green;
+    border-top: 2px solid white;
 }
+
+.main_element{
+    padding: 2rem 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+.element1, .element2, .element3, .element4{
+    display: inline-block;
+    line-height: 1.5rem;
+    vertical-align:middle;
+    padding: 10px;
+}
+
+.description_container {
+    align-items: center;
+    background-color: white;
+    border-right: 1px solid green;
+    border-left: 1px solid green;
+    margin: 0 auto;
+    width: 50vw;
+    height: 50vw;
+}
+
+

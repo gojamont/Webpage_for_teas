@@ -5,17 +5,26 @@
 {% endblock %}
 
 {% block main %}
+    <style>
+      main {background-image: url("static/background.png");
+      background-repeat: repeat;
+      };
+    </style>
   <form action="/kontaktai">
-    <div class="container">
-      <div><i class="fa fa-location-arrow" aria-hidden="true" style="margin-bottom: 15px;"></i>
-        Mus galite rasti adresu Dvaro g. 7a, Stirniškių km., Kupiškio raj.
-      </div>
-          <div><i class="fa fa-address-book" aria-hidden="true" style="margin-bottom: 15px;"></i>
-            Telefono numeris: +37065489181
+    <div class="description_container">
+      <div class="description_contacts">
+        <h2> Kur mus rasti?</h2>
+          <div>
+            <i class="fa fa-location-arrow" aria-hidden="true" style="margin-bottom: 15px;"></i>
+            Adresu Dvaro g. 7a, Stirniškių km., Kupiškio raj.
           </div>
-        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.7229728656785!2d24.828725712509698!3d55.780683072982356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e7d70e693fad61%3A0x7ac63f1a90796b3!2sSuba%C4%8Diaus%20sen.%2C%2040137!5e0!3m2!1sen!2slt!4v1700410890591!5m2!1sen!2slt" 
-          width="400" height="250" style="border:0; margin: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </p>
-    </div>
+          <div><i class="fa fa-address-book" aria-hidden="true" style="margin-bottom: 15px;"></i>
+              Susisiekti galite telefono numeriu +37065489181.
+          </div>
+        </div>
+        <div class="description_map" ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.7229728656785!2d24.828725712509698!3d55.780683072982356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e7d70e693fad61%3A0x7ac63f1a90796b3!2sSuba%C4%8Diaus%20sen.%2C%2040137!5e0!3m2!1sen!2slt!4v1700410890591!5m2!1sen!2slt" 
+          height="300" width="700" style="border: 0; margin: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
   </form>
 {% endblock %}

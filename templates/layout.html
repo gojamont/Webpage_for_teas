@@ -9,9 +9,12 @@
     </head>
     <body>
         <div class="navbar">
+            <div class="logo">
+                <a href="{{ url_for('index') }}"><img src="static\icon.png"></a>
+            </div>
             <ul>
-                <li><a href="{{ url_for('index') }}"><img src="static\icon.png" height="80px" width="100px"></a></li>
                 <li><a href="{{ url_for('intro') }}"> Apie Mus </a></li>
+                <li><a href="{{ url_for('kontaktai') }}"> Kontaktai </a></li>
                 <div class="dropdown">
                     <li><button class="dropdown_btn"><a href="{{ url_for('meniu') }}"> Arbatų programų meniu </a>
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -22,16 +25,28 @@
                         <a href="{{ url_for('edu_3') }}"> Bobvakariai </a>
                     </div>
                 </div>
-                <li><a href="{{ url_for('kontaktai') }}"> Kontaktai </a></li>
                 <li><a href="#"> Galerija </a></li>
             </ul>
         </div>
         <main class="container-fluid py-5 text-center">
             {% block main %}{% endblock %} 
         </main>
-        <footer> 
-            <p><i class="fa fa-facebook" aria-hidden="true"></i> Sekite mus FB puslapyje!</p>
-            <p><i class="fa fa-phone" aria-hidden="true"></i> Susisiekite tel.nr +37061582040</p>
+        <footer class="main_element">
+            <div class="element1">
+                Dvaro g. 7A, Stirniškių km.<br>
+                Kupiškio raj.<br>
+                Pašto kodas: 40388
+            </div>
+            <div class="element2">
+                <i class="fa fa-phone" aria-hidden="true"></i> Susisiekite tel.nr +37061582040</p>
+            </div>
+            <div class="element3">
+                <p>Turite klausimų?</p>
+                <p> Rašykite mums el. pašto adresu <br> bazilikopasta@gmail.com</p>
+            </div>
+            <div class="element4">
+                <p> Baziliko pasta &copy </p>
+            </div>
         </footer>
     </body>
 </html>
