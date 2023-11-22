@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family: "ISOCPEUR";
+
 }
 html {
     height: 100%;
@@ -208,7 +210,7 @@ footer {
     position: sticky;
     text-align: center;
     color: white;
-    background-color: rgba(34,88,49);
+    background-color: rgba(2, 40, 2);
     bottom: 0;
     border-top: 2px solid white;
 }
