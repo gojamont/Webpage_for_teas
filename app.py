@@ -30,5 +30,9 @@ def intro():
 def kontaktai():
     return render_template("kontaktai.html")
 
+@app.route('/galerija')
+def galerija():
+    return render_template("galerija.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

@@ -4,7 +4,6 @@
     box-sizing: border-box;
     overflow-x: hidden;
     font-family: "ISOCPEUR";
-
 }
 html {
     height: 100%;
@@ -52,6 +51,7 @@ div {
 .navbar li {
     display: inline;
     padding: 20px;
+    font-size: 18px;
 }
 .navbar a {
     text-decoration: none;
@@ -69,9 +69,8 @@ div {
     text-align: center;
 }
 
-#meniu ul {
+#meniu ul{
     list-style-type: none;
-    font-size: 20px;
     display: inline-block;
 }
 
@@ -98,11 +97,9 @@ div {
   
   /* Dropdown button */
   .dropdown .dropdown_btn {
-    font-size: 16px;
     border: none;
-    color: black;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
+    font-size: inherit;
     margin: 0; /* Important for vertical align on mobile phones */
   }
   
@@ -111,6 +108,7 @@ div {
     display: none;
     position: absolute;
     background-color: white;
+    font-size: inherit;
     z-index: 2;
   }
   
@@ -236,7 +234,24 @@ footer {
     border-left: 1px solid green;
     margin: 0 auto;
     width: 50vw;
-    height: 50vw;
 }
+ul li {
+    display: inline;
+    justify-content: space-around;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.grid_container_gallery{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: space-around;
+    vertical-align: middle;
+    align-items: center;
+    width: 100%;
+    grid-gap: 10px;
+}
+
 
 
