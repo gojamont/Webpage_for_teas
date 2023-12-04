@@ -6,17 +6,18 @@
         <meta name=”viewport” content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="\static\styles.css">
         <link rel="stylesheet" href="static\font-awesome\css\font-awesome.min.css">
+        <script type="text/javascript" src="{{ url_for('static', filename='/functions.js') }}"></script>
     </head>
     <body>
         <div class="navbar">
             <div class="logo">
-                <a href="{{ url_for('index') }}"><img src="static\icon.png"></a>
+                <a href="{{ url_for('index') }}"><img src="static\photos_2\icon.png"></a>
             </div>
             <ul>
                 <li><a href="{{ url_for('nuoma') }}"> Nuoma </a></li>
                 <li><a href="{{ url_for('kontaktai') }}"> Kontaktai </a></li>
                 <div class="dropdown">
-                    <li><button class="dropdown_btn"><a href="{{ url_for('meniu') }}"> Arbatų programų meniu </a>
+                    <li><button class="dropdown_btn" onclick="dropdown()"><a href="{{ url_for('meniu') }}"> Arbatų programų meniu </a>
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                     </button></li>
                     <div class="dropdown-content">
@@ -26,6 +27,7 @@
                     </div>
                 </div>
                 <li><a href="{{ url_for('galerija') }}"> Galerija </a></li>
+                <li><img src="\static\photos_2\klasteris_logo.webp" height="36" width="74"></li>
             </ul>
         </div>
         <main class="container-fluid py-5 text-center">

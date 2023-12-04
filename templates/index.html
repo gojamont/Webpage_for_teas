@@ -6,7 +6,7 @@
 
 {% block main %}
 <form action="/">
-    <div class="container" style="margin: 0 auto; height: 40vw; background-image: url('static/vaistazoles_1.JPG') ;">
+    <div class="container" style="margin: 0 auto; height: 40vw; background-image: url('static/photos_2/vaistazoles_1.JPG') ;">
         <div id="header">
             Sveiki atvykę į vaistažolių pasaulį!
         </div>
@@ -14,7 +14,7 @@
     <div class="container" style="height: 50vw;">
         <h2> Apie Mus </h2>
         <div class="img-container">
-            <img src="static\sodai.JPG" alt="Renatos Sodai">
+            <img src="static\photos_2\sodai.JPG" alt="Renatos Sodai">
             <p> Meditacijos oazė "Renatos Sodai" įsikūrusi Kupiškio rajone, Lėvėns slėnio kraštovaizdžio draustinio apsuptyje.
                 <br><br> 
                 Atvykę čia susipažinsite su įvairiomis, Lietuvoje augančiomis, vaistažolėmis, jų naudingosiomis savybėmis.
@@ -25,11 +25,17 @@
         </div>
     </div>
     <div class="container">
-    <h2> Edukacinės programos </h2>
         <div class="grid-container">
-            <div><img class="image" src="{{ url_for('static', filename='meta.jpg') }}" alt="Mėtos"></div>
-            <div><img class="image" src="{{ url_for('static', filename='lapukai_2.jpg') }}" alt="Lapukai"></div>
-            <div><img class="image" src="{{ url_for('static', filename='salavijas.jpg') }}" alt="Šalavijas"></div>
+            <div>
+                <p> Vaistas ir maistas šalia </p>
+                <img class="image" src="{{ url_for('static', filename='/photos_2/meta.jpg') }}" alt="Mėtos">
+            </div>
+            <div>
+                <p> Vaistažolės prie namų </p>
+                <img class="image" src="{{ url_for('static', filename='/photos_2/lapukai_2.jpg') }}" alt="Lapukai"></div>
+            <div>
+                <p> Bobvakariai </p>
+                <img class="image" src="{{ url_for('static', filename='/photos_2/salavijas.jpg') }}" alt="Šalavijas"></div>
         </div>  
     </div>
 </form>

@@ -5,10 +5,38 @@
 {% endblock %}
 
 {% block main %}
+<style>
+  main {
+      background-image: url('/static/photos_2/background.png');
+  }
+</style>
   <form action="/nuoma">
-    <div class="container">
-      Norintys apsistoti truputėlį ilgėliau arba ieškantys vietos šeimos šventei gali išsinuomoti patalpas.
-      Nuomos kaina - 10 eur vienam asmeniui.
+    <div class="container" style="width: 60vw; background-color: #fff; margin: 0 auto;">
+      <div style="width: 50vw; font-size: 20px;">
+        <h2 style="font-size: 40px; overflow: hidden;"> Nuoma </h2>
+        <p>
+          Norintys apsistoti truputėlį ilgėliau arba ieškantys vietos šeimos šventei gali išsinuomoti patalpas.
+          Nuomos kaina - <b>10 eur</b> vienam asmeniui.
+          Sodybos kaina - <b>250 eur</b>. 
+          Priimame lankytojus <b>tik vasaros sezonu</b>.
+        </p>
+      </div>
+    <div class="grid_container_gallery" style="width: 50vw;">
+        <img src="static\photos\namai_6.jpg" alt="namai_1" height="400" width="300">
+        <img src="static\photos\namai_2.jpg" alt="namai_2" height="400" width="300">
+        <img src="static\photos\namai_8.jpg" alt="namai_3" height="400" width="300">
+        <img src="static\photos\namai_7.jpg" alt="namai_4" height="400" width="300">
+        <img src="static\photos\namai_3.jpg" alt="namai_5" height="400" width="300">
+        <img src="static\photos\namai_4.jpg" alt="namai_6" height="400" width="300">
     </div>
+    <div class="modal">
+      <span class="close">&times;</span>
+      <span class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+      <span class="previous"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+      <div class="modal_content">
+        <img src="static\photos\namai_6.jpg" class="modalImg">
+      </div>
+    </div>
+  </div>
   </form>
 {% endblock %}
