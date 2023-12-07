@@ -34,3 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.remove("appear");
     });
 });
+
+function toggleDropdown() {
+    var dropdownContent = document.querySelector('.dropdown-content');
+    if (dropdownContent.style.display == "block") {
+        dropdownContent.style.display = "none";
+    } else {
+        dropdownContent.style.display = "block";
+        dropdownContent.style.overflow = "visible";
+    }
+}

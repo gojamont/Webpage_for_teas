@@ -57,8 +57,8 @@ div {
 .navbar a {
     text-decoration: none;
     color: black;
-    position: relative; /* Set position relative for absolute positioning of the underline */
 }
+
 .navbar a:hover {
     color: green;
 }
@@ -94,7 +94,8 @@ div {
 
 /* The dropdown container */
 .dropdown {
-    position: relative;
+    display: inline-block;
+    overflow: hidden;
   }
   
   /* Dropdown button */
@@ -102,21 +103,26 @@ div {
     border: none;
     background-color: inherit;
     font-size: inherit;
-    margin: 0; /* Important for vertical align on mobile phones */
+    cursor: pointer;
   }
-  
   /* Dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
     font-size: inherit;
-    z-index: 2;
-  }
-  
-  /* Add a grey background color to dropdown links on hover */
-  .dropdown-content a:hover {
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 20px;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    width: 250px;
+    transform: translateX(-25%);
     background-color: white;
+    box-shadow: 10px 10px 10px #000;
   }
 
 /* Layout Styles */
@@ -131,6 +137,7 @@ div {
     grid-template-columns: 1fr 1fr;
     width: 80%;
 }
+
 .img-container img,
 .img-container p {
     display: inline-block;
@@ -185,14 +192,42 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    overflow-x: hidden;
+    overflow: auto;
+}
+
+.grid-container .image {
+    position: relative; /* Add position relative for positioning pseudo-element */
+    transition: transform .2s;
+}
+
+.grid-container .image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black overlay with 80% opacity */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.2s; /* Transition for opacity change */
+}
+
+.grid-container .image:hover::before {
+    opacity: .6; /* Show the overlay on hover */
+}
+
+.grid-container .image:hover {
+    transform: scale(1.05);
 }
 
 .grid-container p {
     position: absolute;
-    color: white; 
-    font-size: 30px;
-} 
+    color: white;
+    font-size: 40px;
+    opacity: 1;
+    text-align: center; /* Center the text horizontally */
+}
+
 footer {
     width: 100%;
     position: sticky;

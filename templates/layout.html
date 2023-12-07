@@ -16,16 +16,17 @@
             <ul>
                 <li><a href="{{ url_for('nuoma') }}"> Nuoma </a></li>
                 <li><a href="{{ url_for('kontaktai') }}"> Kontaktai </a></li>
-                <div class="dropdown">
-                    <li><button class="dropdown_btn" onclick="dropdown()"><a href="{{ url_for('meniu') }}"> Arbatų programų meniu </a>
-                        <i class="fa fa-caret-down" aria-hidden="true"></i>
-                    </button></li>
+                <li class="dropdown">
+                    <button class="dropdown_btn"">
+                        <a href="{{ url_for('meniu') }}">Arbatų programų meniu</a>
+                        <i class="fa fa-caret-down" aria-hidden="true" onclick="toggleDropdown()"></i>
+                    </button>
                     <div class="dropdown-content">
-                        <a href="{{ url_for('edu_1') }}"> Vaistas ir maistas šalia </a>
-                        <a href="{{ url_for('edu_2') }}"> Vaistažolės prie namų </a>
-                        <a href="{{ url_for('edu_3') }}"> Bobvakariai </a>
+                        <a href="{{ url_for('edu_1') }}">Vaistas ir maistas šalia</a>
+                        <a href="{{ url_for('edu_2') }}">Vaistažolės prie namų</a>
+                        <a href="{{ url_for('edu_3') }}">Bobvakariai</a>
                     </div>
-                </div>
+                </li>
                 <li><a href="{{ url_for('galerija') }}"> Galerija </a></li>
                 <li><img src="\static\photos_2\klasteris_logo.webp" height="36" width="74"></li>
             </ul>

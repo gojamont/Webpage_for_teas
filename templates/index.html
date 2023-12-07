@@ -26,17 +26,24 @@
     </div>
     <div class="container">
         <div class="grid-container">
-            <div>
+            <a href="{{ url_for('edu_1') }}">
+            <div class="image">
                 <p> Vaistas ir maistas šalia </p>
-                <img class="image" src="{{ url_for('static', filename='/photos_2/meta.jpg') }}" alt="Mėtos">
+                <img src="{{ url_for('static', filename='/photos_2/meta.jpg') }}" alt="Mėtos">
             </div>
-            <div>
+            </a>
+            <a href="{{ url_for('edu_2') }}">
+            <div class="image">
                 <p> Vaistažolės prie namų </p>
-                <img class="image" src="{{ url_for('static', filename='/photos_2/lapukai_2.jpg') }}" alt="Lapukai"></div>
-            <div>
+                <img src="{{ url_for('static', filename='/photos_2/lapukai_2.jpg') }}" alt="Lapukai"></div>
+            </a>
+                <a href="{{ url_for('edu_3') }}">
+                <div class="image">
                 <p> Bobvakariai </p>
-                <img class="image" src="{{ url_for('static', filename='/photos_2/salavijas.jpg') }}" alt="Šalavijas"></div>
-        </div>  
+                <img src="{{ url_for('static', filename='/photos_2/salavijas.jpg') }}" alt="Šalavijas">
+            </div>
+          </a>
+        </div>
     </div>
 </form>
 {% endblock %}
