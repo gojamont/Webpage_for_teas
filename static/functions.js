@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+ // dropdown menu
 function toggleDropdown() {
     var dropdownContent = document.querySelector('.dropdown-content');
     if (dropdownContent.style.display == "block") {

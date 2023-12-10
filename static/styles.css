@@ -121,8 +121,8 @@ div {
     display: block;
     width: 250px;
     transform: translateX(-25%);
-    background-color: white;
-    box-shadow: 10px 10px 10px #000;
+    background-color: #fff;
+    box-shadow: 10px 10px 10px #383838;
   }
 
 /* Layout Styles */
@@ -130,6 +130,13 @@ div {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#banner {
+    margin: 0 auto; 
+    height: 40vw;
+    background-image: url('photos_2/vaistazoles_1.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
     /* Style to display image and text side by side */
 .img-container {
