@@ -11,7 +11,7 @@
                 Sveiki atvykę į vaistažolių pasaulį!
             </div>
         </div>
-        <div class="container" style="height: 50vw;">
+        <div class="container" id="apie_mus_description">
             <h2> Apie Mus </h2>
             <div class="img-container">
                 <img src="static\photos_2\sodai.JPG" alt="Renatos Sodai">
@@ -20,11 +20,11 @@
                     Atvykę čia susipažinsite su įvairiomis, Lietuvoje augančiomis, vaistažolėmis, jų naudingosiomis savybėmis.
                     <br><br>
                     "Renatos Soduose" jūsų laukia ne tik edukacinės programos, bet ir degustacijos, kurių metu ragausite iš vietinių žolelių
-                    pagamintas arbatas.
                 </p>
             </div>
+            <img id="mobile_only" src="{{ url_for('static', filename='/photos/ornamentas.png') }}">
         </div>
-        <div class="container">
+        <div class="container" id="grid">
             <div class="grid-container">
                 <a href="{{ url_for('edu_1') }}">
                 <div class="image">

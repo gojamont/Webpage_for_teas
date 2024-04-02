@@ -6,32 +6,30 @@
 
 {% block main %}
 <form action="/meniu">
-  <div class="container">
-      <div id="meniu">
+      <div class="meniu">
         <ul>
           <li>
-            <div>
-              <img src="static\photos_2\vaistazoles.jpg" alt="Vaistažolės" width="250" height="250" style="border-radius: 50%; margin: 20px;">
+            <div class="item">
+              <img src="static\photos_2\vaistazoles.jpg" alt="Vaistažolės">
               <i class="fa fa-pagelines"></i>
               <a href="{{ url_for('edu_1') }}"> Vaistas ir maistas šalia namų</a>
           </div>
           </li>
           <li>
-            <div>
-              <img src="static\photos_2\vaistazoles_1.jpg" alt="Vaistažolės" width="250" height="250" style="border-radius: 50%; margin: 20px;"> 
+            <div class="item">
+              <img src="static\photos_2\vaistazoles_1.jpg" alt="Vaistažolės"> 
               <i class="fa fa-pagelines"></i>
               <a href="{{ url_for('edu_2') }}"> Vaistažolės prie namų </a>
             </div>
           </li>
           <li>
-            <div>
-              <img src="static\photos_2\bobvakaris.jpg" alt="bobvakaris" width="250" height="250" style="border-radius: 50%; margin: 20px;"> 
+            <div class="item">
+              <img src="static\photos_2\bobvakaris.jpg" alt="bobvakaris"> 
               <i class="fa fa-pagelines"></i>
-            <a href="{{ url_for('edu_3') }}"> Bobvakariai </a>
+              <a href="{{ url_for('edu_3') }}"> Bobvakariai </a>
           </div>
           </li>
         </ul>
       </div>
-    </div>
   </form>
 {% endblock %}

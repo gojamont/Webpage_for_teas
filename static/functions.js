@@ -1,7 +1,7 @@
 // gallery functions
 
 document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll(".grid_container_gallery > img");
+    const images = document.querySelectorAll(".grid_container_gallery > img, .grid_container_gallery_nuoma > img");
     const modal = document.querySelector(".modal");
     const next = document.querySelector(".next");
     const previous = document.querySelector(".previous");
@@ -38,10 +38,24 @@ document.addEventListener("DOMContentLoaded", () => {
  // dropdown menu
 function toggleDropdown() {
     var dropdownContent = document.querySelector('.dropdown-content');
+
     if (dropdownContent.style.display == "block") {
         dropdownContent.style.display = "none";
     } else {
         dropdownContent.style.display = "block";
         dropdownContent.style.overflow = "visible";
     }
-}
+};
+
+ // dropdown menu
+  function toggleDropdown_1() {
+    var dropdownContentmobile = document.querySelector('.dropdown-content-mobile');
+    if (dropdownContentmobile.style.display == "flex") {
+            dropdownContentmobile.classList.remove("active");
+            dropdownContentmobile.style.display = "none";
+    } else {
+        dropdownContentmobile.classList.add("active");
+        dropdownContentmobile.style.display = "flex";
+        dropdownContentmobile.style.backgroundcolor = "blue";
+     }
+}; 
