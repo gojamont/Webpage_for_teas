@@ -25,7 +25,7 @@ body {
 div {
     text-align: center;
     margin: 1.875em;
-    line-height: 1.5;
+    line-height: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,17 +75,15 @@ div {
     color: green;
 }
 
-.meniu {
-    flex-direction: row;
-}
-.item {
+.meniu{
     display: flex;
-    padding: 1em;
+    flex-direction: row;
 }
 
 .item a{
     color: darkgreen;
     text-decoration: none;
+    overflow: hidden;
 }
 
 .item a:hover {
@@ -93,10 +91,11 @@ div {
 }
 
 .item img {
-    width: 13em;
-    height: 13em;
+    width: 12em;
+    height: 12em;
     border-radius: 50%;
     margin: 1em;
+    
 }
 
 /* Dropdown menu */
