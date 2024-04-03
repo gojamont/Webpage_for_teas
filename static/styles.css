@@ -25,11 +25,11 @@ body {
 div {
     text-align: center;
     margin: 1.875em;
-    line-height: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    line-height: 150%;
 }
 
 /* Navigation Styles */
@@ -79,7 +79,6 @@ div {
     display: flex;
     flex-direction: row;
 }
-
 .item a{
     color: darkgreen;
     text-decoration: none;
@@ -191,11 +190,6 @@ i {
     left: 0;
     margin: 0em 1.25em;
     font-size: 1.563rem;
-    line-height: 1.5em;
-}
-
-p {
-    margin: 0; /* Add this rule to reset the margin for paragraphs */
 }
 
 #apie_mus_description h2 {
@@ -212,8 +206,7 @@ p {
     grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: center;
     align-items: center;
-    width: 100%;
-    overflow: auto;
+    margin: auto;
 }
 
 .grid-container .image {
@@ -243,8 +236,9 @@ p {
 
 .grid-container p {
     position: absolute;
+    overflow: visible;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     opacity: 1;
     text-align: center; /* Center the text horizontally */
 }
@@ -427,6 +421,7 @@ ul li {
 
 .close {
     position: absolute;
+    overflow: visible;
     top: 0.938em;
     right: 0.8em;
     color: black;
@@ -483,4 +478,25 @@ ul li {
 @keyframes zoom {
     from {transform: scale(0)}
     to {transform: scale(1)}
+}
+/* kontaktai */
+.description_contacts {
+    font-size: 1.125rem;
+}
+
+.description_contacts i {
+    margin-bottom: 0.938em;
+}
+
+.description_map iframe {
+    border: none;
+    min-width: 90%;
+    height: 100%;
+    margin: 0;
+}
+
+.description_map {
+    margin: 1.25em;
+    height: 20vw;
+    width: 100%;
 }

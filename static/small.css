@@ -2,7 +2,6 @@
     .logo {
         margin: 0.313em; /* Adjust margin as needed */
         width: 6em;
-        
     }
     
     .logo img {
@@ -221,29 +220,36 @@
     }
     
 } 
-/* nuoma */
-.nuoma {
-    width: 90vw;
-}
-.nuoma_description {
-    width: 90%;
-    /*text-align: justify;*/
-}
+    /* nuoma */
+    .nuoma {
+        width: 90vw;
+    }
+    .nuoma_description {
+        width: 90%;
+        /*text-align: justify;*/
+    }
 
-.grid_container_gallery_nuoma {
-    width: 85%;
-    justify-content: center;
-}
+    .grid_container_gallery_nuoma {
+        width: 85%;
+        justify-content: center;
+    }
 
-.nuoma h2 {
-    font-size: 40px; 
-    overflow: hidden;
-}
+    .nuoma h2 {
+        font-size: 40px; 
+        overflow: hidden;
+    }
+    .meniu {
+        flex-wrap: wrap;
+    }
 
-.meniu {
-    flex-direction: column;
-}
-.item {
-    display: flex;
-    padding: 1em;
-}
+    .description_container h2 {
+        text-align: center;
+        vertical-align: bottom;
+        margin: 0.2em;
+    }
+
+    .description_container li {
+       display: inline-block;
+       line-height: 1.5em;
+    }
+    
