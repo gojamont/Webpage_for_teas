@@ -282,7 +282,7 @@ h1, h2 {
     height: 100%;
     align-self: flex-start;
     padding: 3em;
-    background-color: rgba(33,17,4, 0.5);
+    background-color: rgba(39,49,2, 0.3);
     backdrop-filter: blur(16px);
     margin: 0;
     color: whitesmoke;
