@@ -239,3 +239,11 @@
     font-size: 40px; 
     overflow: hidden;
 }
+
+.meniu {
+    flex-direction: column;
+}
+.item {
+    display: flex;
+    padding: 1em;
+}
