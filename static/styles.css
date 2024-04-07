@@ -6,6 +6,9 @@
     font-family: "ISOCPEUR";
 }
 
+@font-face { font-family: "ISOCPEUR"; 
+    src: url('/static/font/ISOCPEUR.ttf'); } 
+
 html {
     height: 100%;
 }
