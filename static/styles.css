@@ -370,11 +370,12 @@ ul li {
     grid-template-rows: auto auto;
     justify-content: space-between;
     width: 100%;
+    height: 100%;
     gap: 1em;
 }
 .grid_container_gallery img, .grid_container_gallery_nuoma img {
-    width: 100%;
-    height: 100%;
+    width: inherit;
+    height: inherit;
 }
 
 /* nuoma */
