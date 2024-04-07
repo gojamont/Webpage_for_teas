@@ -148,12 +148,14 @@ i {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    margin: 2em;
+    margin: 1em;
+    overflow:visible;
 }
 
 .img-container img,
 .img-container p {
     display: inline-block;
+    margin: none;
 }
 
 .img-container img {
@@ -164,8 +166,8 @@ i {
 
 .img-container p {
     text-align: justify;
-    font-size: 1.7vw;
-    overflow: visible;
+    font-size: 1.9vw;
+    line-height: 200%;
     color: olive;
 }
 
@@ -174,7 +176,9 @@ i {
 }
 
 #apie_mus_description {
-    height: 50vw;
+    height: 60vw;
+    line-height: 2.5rem;
+ /* Add margin-bottom to separate h2 from the following div */
 }
 
 #header {
@@ -196,7 +200,6 @@ i {
     font-size: 2.5vw;
     text-align: center;
     color: olive;
-    margin-bottom: 10px; /* Add margin-bottom to separate h2 from the following div */
 }
 
 /* Grid and Flexbox Styles */
@@ -211,7 +214,12 @@ i {
 
 .grid-container .image {
     position: relative; /* Add position relative for positioning pseudo-element */
+    line-height: 4rem;
     transition: transform .2s;
+}
+.grid-container .image p  {
+    font-size: 1.5em;
+    margin: 1em;
 }
 
 .grid-container .image::before {

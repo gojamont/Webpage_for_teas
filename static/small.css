@@ -1,4 +1,11 @@
 @media only screen and (max-width: 700px) {
+    * {
+        font-family: "Candara";
+    }
+    h2 {
+        font-size: 7vw;
+        text-align: center;
+    }
     .logo {
         margin: 0.313em; /* Adjust margin as needed */
         width: 6em;
@@ -79,10 +86,6 @@
         margin: inherit;
         background-color: rgba(2, 40, 2, .6);
         color: white;
-    }
-
-    h2 {
-        font-size: 30px;
     }
 
    #apie_mus_description{
