@@ -45,7 +45,7 @@
         right: 0;
         width: 100vw;
         padding: 2em;
-        background-color: whitesmoke;
+        background-color: white;
         text-align: center;
     }
     .dropdown-content-mobile.active a {
@@ -56,7 +56,7 @@
     }
 
     .navbar {
-        background-color:  whitesmoke;
+        background-color:  white;
         justify-content: space-between;
         display: flex;
         flex-direction: row;
@@ -164,7 +164,7 @@
     }
 
     .product_description, .product_description_2, .product_description_3 {
-        background-color: whitesmoke;
+        background-color: white;
         width: 90%; 
         margin: 1em;
         padding: 1.5em;
@@ -178,10 +178,10 @@
 
     .product_description_2 {
         background-color: rgba(33,17,4, 0.5);
-        color: whitesmoke;
+        color: white;
     }
     .product_description_2 h1, .product_description_2 h2 {
-        color: whitesmoke;
+        color: white;
     }
     /* product 2*/
 
@@ -202,7 +202,7 @@
     /* kontaktai */
     .description_container {
         width: 90vw;
-        background-color: whitesmoke;
+        background-color: white;
         border: none;
         white-space: initial;
     }
@@ -230,8 +230,12 @@
     }
 
     .grid_container_gallery_nuoma {
-        width: 85%;
         justify-content: center;
+        padding: 0 15%;
+    }
+
+    .grid_container_gallery_nuoma img {
+        width: inherit;
     }
 
     .nuoma h2 {

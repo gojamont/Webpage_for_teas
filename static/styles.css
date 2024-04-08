@@ -18,7 +18,7 @@ h1, h2, h3 {
 
 body {
     font-size: 1.5rem;
-    background-color: whitesmoke;
+    background-color: white;
     display: flex;
     flex-direction: column;
     margin: 0; /* added margin reset */
@@ -132,7 +132,7 @@ i {
     display: block;
     width: 15.625em;
     transform: translateX(-25%);
-    background-color: whitesmoke;
+    background-color: white;
     box-shadow: 1px 1px 1px #999797;
 }
 .dropdown_menu {
@@ -295,13 +295,13 @@ h1, h2 {
     background-color: rgba(39,49,2, 0.3);
     backdrop-filter: blur(16px);
     margin: 0;
-    color: whitesmoke;
+    color: white;
     text-align: center; 
     font-size: 1.5rem;
 }
 
 .product_description_2 h1, .product_description_2 h2, .product_description_3 h2 {
-    color: whitesmoke;
+    color: white;
 }
 
 /*product 2 */
@@ -318,7 +318,7 @@ h1, h2 {
     background-color: rgba(3, 38, 13, 0.773);
     backdrop-filter: blur(16px);
     margin: 0;
-    color: whitesmoke;
+    color: white;
     text-align: center; 
     font-size: 1.5rem;
 }
@@ -397,7 +397,7 @@ ul li {
 }
 
 .nuoma_description, .nuoma h2 {
-    background-color: rgba(245, 245, 245,.9);
+    background-color: rgba(255,255,255,0.8);
 }
 
 .grid_container_gallery_nuoma {
