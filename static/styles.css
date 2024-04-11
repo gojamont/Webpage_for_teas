@@ -368,14 +368,22 @@ ul li {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     height: 100%;
-    gap: 1em;
+    grid-gap: 1rem;
 }
-.grid_container_gallery img, .grid_container_gallery_nuoma img {
-    width: inherit;
+/*.grid_container_gallery img, .grid_container_gallery_nuoma img {
     height: inherit;
+    width: inherit;
+}*/
+
+.grid_item {
+    width: 100%; 
+    height: 100%;
+    -webkit-box-flex: 1; /* Safari, iOS, Android browser */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
 }
 
 /* nuoma */
