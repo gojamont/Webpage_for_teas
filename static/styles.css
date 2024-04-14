@@ -365,10 +365,8 @@ ul li {
 }
 .grid_container_gallery, .grid_container_gallery_nuoma {
     display: grid;
-    /*justify-content: space-evenly;*/
     width: 100%;
     height: auto;
-    overflow: visible;
     grid-gap: 1rem;
 }
 
