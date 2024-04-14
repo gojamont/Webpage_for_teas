@@ -365,14 +365,14 @@ ul li {
 }
 .grid_container_gallery, .grid_container_gallery_nuoma {
     display: grid;
-    justify-content: space-evenly;
+    /*justify-content: space-evenly;*/
     width: 100%;
     height: auto;
     grid-gap: 1rem;
 }
 
 .grid_container_gallery_nuoma {
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, 33%);
     grid-template-rows: auto auto;
 }
 
@@ -386,7 +386,6 @@ ul li {
 }
 
 .grid_container_gallery_nuoma img {
-    height: inherit;
     width: inherit;
 }
 
