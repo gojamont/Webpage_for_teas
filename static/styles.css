@@ -379,12 +379,15 @@ ul li {
 .grid_container_gallery {
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(20%, 1fr));
-
-    
 }
 
-.grid_container_gallery img, .grid_container_gallery_nuoma img {
-    height: 100%;
+.grid_container_gallery img {
+    height: auto;
+    width: inherit;
+}
+
+.grid_container_gallery_nuoma img {
+    height: inherit;
     width: inherit;
 }
 
