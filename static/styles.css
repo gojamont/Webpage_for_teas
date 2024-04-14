@@ -368,6 +368,7 @@ ul li {
     /*justify-content: space-evenly;*/
     width: 100%;
     height: auto;
+    overflow: visible;
     grid-gap: 1rem;
 }
 
