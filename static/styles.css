@@ -378,7 +378,7 @@ ul li {
 .grid_container_gallery {
     grid-template-columns: repeat(auto-fit, 31%);
     grid-template-rows: auto;
-    margin: auto 0;
+    overflow-y: hidden;
     }
 
 .grid_container_gallery img, .grid_container_gallery_nuoma img  {
