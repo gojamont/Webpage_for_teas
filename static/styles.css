@@ -211,6 +211,7 @@ i {
     grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: center;
     align-items: center;
+    -webkit-align-items: center;
     margin: auto;
 }
 
@@ -251,7 +252,6 @@ i {
     font-size: 2.8rem;
     opacity: 1;
     text-align: center; /* Center the text horizontally */
-    -webkit-align-items: center;
 }
 
 .product {
