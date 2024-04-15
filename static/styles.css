@@ -376,8 +376,8 @@ ul li {
 }
 
 .grid_container_gallery {
-    grid-template-columns: repeat(auto-fit, 31.5%);
-    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(auto-fit, 31%);
+    grid-template-rows: auto;
     margin: auto 0;
     }
 
