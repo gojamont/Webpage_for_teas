@@ -1,0 +1,18 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>{{ category }}</h2>
+    <div class="listing_container">
+    {% for listing in listings %}
+        <div class="listing_element">
+            <div class="listing_image"><img src="{{listing.url}}" alt="{{ listing.title }}" height="300" width="400"></div>
+            <div class="listing_description"><h4><a class="nav-link" href="{% url 'listing' listing.id %}">{{ listing.title }}</a></h4>
+                        {{ listing.description }}
+                        Price: ${{ listing.price }}
+            </div>
+        </div>
+    </div>
+    {% empty %}
+                No items of this category. Go ahead and create it ❣
+    {% endfor %}
+{% endblock %}

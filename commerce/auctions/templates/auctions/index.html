@@ -1,0 +1,20 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Active Listings</h2>
+    <div class="listing_container" id="menu_container">
+        {% for listing in listings %}
+                        <div class="listing_element" id="menu_element" style="text-align: center;">
+                            <div class="listing_image" id="listing_item"><img src="{{listing.url}}" alt="{{ listing.title }}"></div>
+                                <div class="listing_description" style="padding: 0 2em; text-align: center;">
+                                    <h4><a class="nav-link" href="{% url 'listing' listing.id %}">{{ listing.title }}</a></h4>
+                                    {{ listing.description }}
+                                </div>
+                                Starting price: ${{ listing.price }} <br>
+                                Current price: $ {{ listing.current_price }}
+                        </div>
+            {% empty %}
+                There are no active listings yet. You're welcome to create one!
+        {% endfor %}
+    </div>
+{% endblock %}

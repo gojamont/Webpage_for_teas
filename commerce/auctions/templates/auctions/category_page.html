@@ -1,0 +1,18 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="category_container">
+        {% if user.is_authenticated == True %}
+            <div class="form-group" id="category_group" style="text-align: left;">
+                <h2 style="color: white; text-align: center; margin: 1em;">Categories</h2>
+                    {% for category in categories %}
+                        <ul>
+                            <li class="list-group-item list-group-item-action"><a href="{% url 'category' category.id %}">{{ category }}</a></li>
+                        </ul>
+                    {% endfor %}
+            </div>
+        </div>
+            {% elif user.is_authenticated == False %}
+                Not signed in. Please login and try again. 
+        {% endif %}
+{% endblock %}
