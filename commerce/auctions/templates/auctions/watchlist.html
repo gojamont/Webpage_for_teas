@@ -8,15 +8,22 @@
                 <div class="listing_element">
                     <div class="listing_image"><img src="{{listing.url}}" alt="{{ listing.title }}" height="300" width="400"></div>
                     <div class="listing_description"><h4><a class="nav-link" href="{% url 'listing' listing.id %}">{{ listing.title }}</a></h4>
-                        {{ listing.description }}
-                        Price: ${{ listing.price }}
+                        {{ listing.description }} <br>
+                        Initial Price: ${{ listing.price }} <br>
+                        Current Price: ${{ listing.current_price }} <br>
                     </div>
                 </div>
             {% elif user.is_authenticated == False %}
+            <style>
+                .listing_container {justify-content: center};
+            </style>
                 Not signed in. Please login and try again. 
         {% endif %}
-    {% empty %}
-        There are no listings in a watchlist yet. You're welcome to add one!
-    {% endfor %}
+        {% empty %}
+        <style>
+            .listing_container {justify-content: center};
+        </style>
+            There are no listings in a watchlist yet. You're welcome to add one!
+        {% endfor %}
     </div>
 {% endblock %}
