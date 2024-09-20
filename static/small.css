@@ -1,0 +1,258 @@
+@media only screen and (max-width: 700px) {
+    h2 {
+        font-size: 7vw;
+        text-align: center;
+    }
+    .logo {
+        margin: 0.313em; /* Adjust margin as needed */
+        width: 6em;
+    }
+    
+    .logo img {
+        max-height: 5em;
+        width: auto; /* Allow the image width to adjust while maintaining aspect ratio */
+    }
+
+    .dropdown_menu {
+        display: inline-block;
+    }
+    
+    .dropdown_menu {
+        display: block;
+        right: 0;
+        width: auto; /* Adjust width as needed */
+        height: auto; /* Adjust height as needed */
+        margin: auto 0;
+    }
+
+    .dropdown_btn_mobile {
+        border: none;
+        margin: 1em;
+        font-size: inherit;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .dropdown-content-mobile {
+        display: none;
+        z-index: 2;
+        position: absolute;
+    }
+
+    .dropdown-content-mobile.active {
+        color: black;
+        margin: 1em 0;
+        right: 0;
+        width: 100vw;
+        padding: 2em;
+        background-color: white;
+        text-align: center;
+    }
+    .dropdown-content-mobile.active a {
+        text-decoration: none;
+        display: block;
+        color: inherit;
+        padding: 1em;
+    }
+
+    .navbar {
+        background-color:  white;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .wrapper{
+        display: none;
+    }
+
+    #banner {
+        margin: 0 auto;
+        height: 60vh;
+        background-image: url('photos_2/vaistazoles_1.JPG');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+
+    #header {
+        font-size: 10vw;
+        width: 100%;
+        height: inherit;
+        margin: inherit;
+        background-color: rgba(2, 40, 2, .6);
+        color: white;
+    }
+
+   #apie_mus_description{
+        height: fit-content;
+        padding: 0.3em;
+    }
+    #apie_mus_description h2 {
+        font-size: 2rem;
+    }
+
+    .img-container {
+        justify-content: center;
+        display: block;
+        word-wrap: break-word;
+        width: 100%;
+    }
+    
+    .img-container img {
+        display: none;
+    }
+    
+    .img-container p {
+        text-align: center;
+        font-size: 1.25rem;
+        margin: 0.2em;
+        color: olive;
+    }
+
+    .grid-container, #meniu ul {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: auto;
+    }
+    .grid-container {
+        padding: 0;
+        margin: 0;
+    }
+    .grid-container img{
+        width: 100%;
+    }
+    
+    .grid-container .image {
+        position: relative; /* Add position relative for positioning pseudo-element */
+        transition: transform .2s;
+    }
+
+    .grid-container p {
+        position: absolute;
+        color: white;
+        font-size: 8vw;
+        opacity: 1;
+        text-align: center; /* Center the text horizontally */
+    }
+
+    #grid {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+    }
+    #mobile_only {
+        display: block;
+        position: relative;
+        height: 3em;
+        width: 3em;
+        align-self: center;
+    }
+
+    /* vaistas ir maistas šalia */
+    .product, .product_2, .product_3{
+        display: flex;
+        background-image: url('photos_2/vaistazoles.JPG');
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-height: 100%;
+    }
+
+    .product_description, .product_description_2, .product_description_3 {
+        background-color: white;
+        width: 90%; 
+        margin: 1em;
+        padding: 1.5em;
+        color: darkgreen;
+        text-align: center; 
+        font-size: 5vw;
+    }
+    .product_2{
+        background-image: url('photos_2/sauna.jpg');
+    }
+
+    .product_description_2 {
+        background-color: rgba(33,17,4, 0.5);
+        color: white;
+    }
+    .product_description_2 h1, .product_description_2 h2 {
+        color: white;
+    }
+    /* product 2*/
+
+    .product_description h1, .product_description h2{
+        font-size: 8vw;
+        text-align: center;
+    }
+
+    /* product 3*/
+    .product_3 {
+        background-image: url('photos_2/vaistazoles_1.JPG');
+    }
+    .product_description_3 h1, .product_description_3 h2 {
+        color: darkgreen;
+    }
+    /* product 3*/ 
+
+    /* kontaktai */
+    .description_container {
+        width: 90vw;
+        background-color: white;
+        border: none;
+        white-space: initial;
+    }
+    .description_container h2{
+        font-size: 35px;
+    }
+    
+    .description_map {
+        height:30%;
+        width: 100%;
+    }
+    .grid_container_gallery, .grid_container_gallery_nuoma {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    
+} 
+    /* nuoma */
+    .nuoma {
+        width: 90vw;
+    }
+    .nuoma_description {
+        width: 90%;
+    }
+
+    .grid_container_gallery_nuoma {
+        justify-content: center;
+        padding: 0 15%;
+    }
+
+    .grid_container_gallery_nuoma img {
+        width: inherit;
+    }
+
+    .nuoma h2 {
+        font-size: 40px; 
+        overflow: hidden;
+    }
+    .meniu {
+        flex-wrap: wrap;
+    }
+
+    .description_container h2 {
+        text-align: center;
+        vertical-align: bottom;
+        margin: 0.2em;
+    }
+
+    .description_container li {
+       display: inline-block;
+       line-height: 1.5em;
+    }
+    

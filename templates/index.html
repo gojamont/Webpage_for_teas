@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Pagrindinis Meniu
+{% endblock %}
+
+{% block main %}
+<form action="/">
+        <div class="container" id="banner">
+            <div id="header">
+                Sveiki atvykę į vaistažolių pasaulį!
+            </div>
+        </div>
+        <div class="container" id="apie_mus_description">
+            <h2> Apie Mus </h2>
+            <div class="img-container">
+                <img src="static\photos_2\sodai.JPG" alt="Renatos Sodai">
+                <p> Meditacijos oazė "Renatos Sodai" įsikūrusi Kupiškio rajone, Lėvėns slėnio kraštovaizdžio draustinio apsuptyje. 
+                    Atvykę čia susipažinsite su įvairiomis, Lietuvoje augančiomis, vaistažolėmis, jų naudingosiomis savybėmis.
+                    <br><br>
+                    "Renatos Soduose" jūsų laukia ne tik edukacinės programos, bet ir degustacijos, kurių metu ragausite iš vietinių žolelių
+                </p>
+            </div>
+            <img id="mobile_only" src="{{ url_for('static', filename='/photos/ornamentas.png') }}">
+        </div>
+            <div class="grid-container">
+                <a href="{{ url_for('edu_1') }}">
+                <div class="image">
+                    <p> Vaistas ir maistas šalia </p>
+                    <img src="{{ url_for('static', filename='/photos_2/meta.jpg') }}" alt="Mėtos">
+                </div>
+                </a>
+                <a href="{{ url_for('edu_2') }}">
+                <div class="image">
+                    <p> Vaistažolės prie namų </p>
+                    <img src="{{ url_for('static', filename='/photos_2/lapukai_2.jpg') }}" alt="Lapukai"></div>
+                </a>
+                    <a href="{{ url_for('edu_3') }}">
+                    <div class="image">
+                    <p> Bobvakariai </p>
+                    <img src="{{ url_for('static', filename='/photos_2/salavijas.jpg') }}" alt="Šalavijas">
+                </div>
+                </a>
+            </div>
+        </div>
+</form>
+{% endblock %}

@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "ISOCPEUR";
+}
+
+@font-face { font-family: "ISOCPEUR"; 
+    src: url('/static/font/ISOCPEUR.ttf'); } 
+
+html {
+    height: 100%;
+}
+h1, h2, h3 {
+    line-height: 2em;
+}
+
+body {
+    font-size: 1.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* added margin reset */
+}
+
+/* Reset and General Styles */
+div {
+    text-align: center;
+    margin: 1.875em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 150%;
+}
+
+/* Navigation Styles */
+.navbar {
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+}
+.logo {
+    margin: 5px; /* Adjust margin as needed */
+}
+.logo img{
+    height: 7em;
+    width: 7em;
+}
+.dropdown_menu {
+    display: none;
+}
+.wrapper {
+    margin: 0;
+    border-bottom: 1px solid green;
+}
+.wrapper ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    padding: 0;
+}
+
+.wrapper li {
+    display: inline;
+    font-size: 1.2rem;
+    padding: 1.2em;
+}
+
+.wrapper a {
+    text-decoration: none;
+    color: black;
+}
+
+.wrapper a:hover {
+    color: green;
+}
+
+.meniu{
+    display: flex;
+    flex-direction: row;
+}
+.item a{
+    color: darkgreen;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.item a:hover {
+    color: rgba(145, 72, 13);
+}
+
+.item img {
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    margin: 1em;
+    
+}
+
+/* Dropdown menu */
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown .dropdown_btn {
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    overflow: hidden;
+}
+i {
+    overflow: visible;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    font-size: inherit;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 1.20em;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    width: 15.625em;
+    transform: translateX(-25%);
+    background-color: white;
+    box-shadow: 1px 1px 1px #999797;
+}
+.dropdown_menu {
+    display: none;
+}
+
+#banner {
+    margin: 0 auto;
+    height: 40vw;
+    background-image: url('photos_2/vaistazoles_1.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 1em;
+}
+
+.img-container img,
+.img-container p {
+    display: inline-block;
+    margin: none;
+}
+
+.img-container img {
+    height: auto;
+    width: 80%;
+    border-radius: 10%;
+}
+
+.img-container p {
+    text-align: justify;
+    font-size: 1.9vw;
+    line-height: 200%;
+    color: olive;
+}
+
+#mobile_only{
+    display: none;
+}
+
+#apie_mus_description {
+    height: 60vw;
+    line-height: 2.5rem;
+ /* Add margin-bottom to separate h2 from the following div */
+}
+
+#header {
+    font-size: 3.2rem;
+    width: 100%;
+    height: inherit;
+    margin: inherit;
+    background-color: rgba(2, 40, 2, .6);
+    color: white;
+}
+
+#description {
+    left: 0;
+    margin: 0em 1.25em;
+    font-size: 1.563rem;
+}
+
+#apie_mus_description h2 {
+    font-size: 2.5vw;
+    text-align: center;
+    color: olive;
+}
+
+/* Grid and Flexbox Styles */
+.grid-container, #meniu ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.grid-container .image {
+    position: relative; /* Add position relative for positioning pseudo-element */
+    line-height: 4rem;
+    transition: transform .2s;
+}
+.grid-container .image p  {
+    font-size: 1.5em;
+    margin: 1em;
+}
+
+.grid-container .image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black overlay with 80% opacity */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.2s; /* Transition for opacity change */
+}
+
+.grid-container .image:hover::before {
+    opacity: .6; /* Show the overlay on hover */
+}
+
+.grid-container .image:hover {
+    transform: scale(1.05);
+}
+
+.grid-container p {
+    position: absolute;
+    overflow: visible;
+    color: white;
+    font-size: 2.8rem;
+    opacity: 1;
+    text-align: center; /* Center the text horizontally */
+}
+
+.product {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: 0;
+}
+
+.product_image {
+    background-image: url('photos_2/vaistazoles.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+#mobile {
+    display: none;
+}
+
+h1, h2 {
+    font-size: 2.5rem; 
+    text-align: justify; 
+    margin-bottom: 1.875em; 
+    overflow: hidden
+}
+/* product 2 */
+.product_2, .product_3 {
+    display: flex; 
+    margin: 0;
+    width: 100%;
+    background-image: url('photos_2/sauna.jpg');
+    background-size: cover;
+}
+
+.product_description_2 {
+    width: 50vw;
+    height: 100%;
+    align-self: flex-start;
+    padding: 3em;
+    background-color: rgba(39,49,2, 0.3);
+    backdrop-filter: blur(16px);
+    margin: 0;
+    color: white;
+    text-align: center; 
+    font-size: 1.5rem;
+}
+
+.product_description_2 h1, .product_description_2 h2, .product_description_3 h2 {
+    color: white;
+}
+
+/*product 2 */
+/* product 3*/
+.product_3 {
+    background-image: url('photos_2/vaistazoles_1.JPG');
+}
+
+.product_description_3 {
+    width: 50vw;
+    height: 100%;
+    align-self: flex-end;
+    padding: 3em;
+    background-color: rgba(3, 38, 13, 0.773);
+    backdrop-filter: blur(16px);
+    margin: 0;
+    color: white;
+    text-align: center; 
+    font-size: 1.5rem;
+}
+
+footer {
+    width: 100%;
+    position: sticky;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    background-color: rgba(2, 40, 2);
+    bottom: 0;
+    border-top: 2px solid white;
+}
+
+.main_element {
+    padding: 2rem 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.element1, .element2, .element3, .element4 {
+    display: inline-block;
+    line-height: 1.5rem;
+    vertical-align: middle;
+    padding: 0.625em;
+}
+
+.description_container {
+    align-items: center;
+    background-color: white;
+    border-right: 1px solid green;
+    border-left: 1px solid green;
+    margin: 0 auto;
+    width: 50vw;
+}
+
+ul li {
+    display: inline;
+    justify-content: space-around;
+    margin: 0.625em;
+    font-size: 1.125rem;
+}
+.grid_container_gallery, .grid_container_gallery_nuoma {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-gap: 1rem;
+}
+
+.grid_container_gallery_nuoma {
+    grid-template-columns: repeat(auto-fit, 33%);
+    grid-template-rows: auto auto;
+}
+
+.grid_container_gallery {
+    grid-template-columns: repeat(auto-fit, 31%);
+    grid-template-rows: auto;
+    overflow-y: hidden;
+    }
+
+.grid_container_gallery img, .grid_container_gallery_nuoma img  {
+    width: inherit;
+}
+
+/* nuoma */
+.nuoma {
+    width: 80vw; 
+    margin: 0 auto;
+    justify-self: center;
+}
+
+.nuoma_description p{
+    width: 90%;
+    font-size: 1.25rem;
+    text-align: center; 
+}
+
+.nuoma h2 {
+    font-size: 2.5rem; 
+    overflow: hidden;
+}
+
+.nuoma_description, .nuoma h2 {
+    background-color: rgba(255,255,255,0.8);
+}
+
+.grid_container_gallery_nuoma {
+    justify-content: center;
+}
+
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    pointer-events: none;
+    background-color: rgba(250,250,250, 0.7);
+}
+
+.modal_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalImg {
+    max-width: 80%;
+}
+
+.close {
+    position: absolute;
+    overflow: visible;
+    top: 0.938em;
+    right: 0.8em;
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.next, .previous {
+    position: absolute;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.next {
+    top: 50%;
+    right: 0.8em;
+}
+
+.previous {
+    top: 50%;
+    left: 0.8em;
+}
+
+.next:hover,
+.previous:hover,
+.next:focus,
+.previous:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal.appear {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal.appear .modalImg,
+.modal.appear .modalTxt {
+    animation: zoom 0.3s linear;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+/* kontaktai */
+.description_contacts {
+    font-size: 1.125rem;
+}
+
+.description_contacts i {
+    margin-bottom: 0.938em;
+}
+
+.description_map iframe {
+    border: none;
+    min-width: 90%;
+    height: 100%;
+    margin: 0;
+}
+
+.description_map {
+    margin: 1.25em;
+    height: 20vw;
+    width: 100%;
+}

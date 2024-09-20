@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Edukacinės programos
+{% endblock %}
+
+{% block main %}
+<form action="/meniu">
+	<div class="meniu">
+        <div class="item">
+        	<img src="static\photos_2\vaistazoles.jpg" alt="Vaistažolės">
+              <i class="fa fa-pagelines"></i>
+              <a href="{{ url_for('edu_1') }}"> Vaistas ir maistas šalia namų</a>
+        </div>
+        <div class="item">
+            <img src="static\photos_2\vaistazoles_1.JPG" alt="Vaistažolės"> 
+            <i class="fa fa-pagelines"></i>
+            <a href="{{ url_for('edu_2') }}"> Vaistažolės prie namų </a>
+        </div>
+        <div class="item">
+            <img src="static\photos_2\bobvakaris.jpg" alt="bobvakaris"> 
+            <i class="fa fa-pagelines"></i>
+            <a href="{{ url_for('edu_3') }}"> Bobvakariai </a>
+        </div>
+    </div>
+</form>
+{% endblock %}

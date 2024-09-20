@@ -1,0 +1,76 @@
+<doctype! html>
+<html lang ="lt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/small.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/font-awesome/css/font-awesome.min.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='/functions.js') }}"></script>
+        <script src="https://kit.fontawesome.com/acfe660d88.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='/favicon.ico?v=1.0') }}" />
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">
+                <a href="{{ url_for('index') }}"><img src="static\photos_2\icon.png"></a>
+            </div>
+            <!-- tik mobili versija -->
+              <div class="dropdown_menu">
+                    <button class="dropdown_btn_mobile">
+                        <i class="fa fa-bars" style="color: #084e16;" onclick="toggleDropdown_1()"></i>
+                    </button>
+                   <div class="dropdown-content-mobile">
+                        <ul>
+                            <li><a href="{{ url_for('nuoma') }}"> Nuoma </a></li>
+                            <li><a href="{{ url_for('kontaktai') }}"> Kontaktai </a></li>
+                            <li><a href="{{ url_for('meniu') }}">Arbatų programų meniu</a></li>
+                            <li><a href="{{ url_for('galerija') }}"> Galerija </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <ul>
+                    <li><a href="{{ url_for('nuoma') }}"> Nuoma </a></li>
+                    <li><a href="{{ url_for('kontaktai') }}"> Kontaktai </a></li>
+                    <li class="dropdown">
+                        <button class="dropdown_btn">
+                            <a href="{{ url_for('meniu') }}">Arbatų programų meniu</a>
+                            <i class="fa fa-caret-down" aria-hidden="true" onclick="toggleDropdown()"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('edu_1') }}">Vaistas ir maistas šalia</a>
+                            <a href="{{ url_for('edu_2') }}">Vaistažolės prie namų</a>
+                            <a href="{{ url_for('edu_3') }}">Bobvakariai</a>
+                        </div>
+                    </li>
+                    <li><a href="{{ url_for('galerija') }}"> Galerija </a></li>
+                    <li><img src="\static\photos_2\klasteris_logo.png" height="36" width="74"></li>
+                </ul>
+            </div>
+        </div>
+        <main class="container-fluid py-5 text-center">
+            {% block main %}{% endblock %} 
+        </main>
+        <footer class="main_element">
+            <div class="element1">
+                Dvaro g. 7A, Stirniškių km.<br>
+                Kupiškio raj.<br>
+                Pašto kodas: 40388
+            </div>
+            <div class="element2">
+                <i class="fa fa-phone" aria-hidden="true"></i> Susisiekite tel.nr +37061582040</p>
+            </div>
+            <div class="element3">
+                <p>Turite klausimų?</p>
+                <p> Rašykite mums el. pašto adresu <br> bazilikopasta@gmail.com</p>
+            </div>
+            <div class="element4">
+                <p> Baziliko pasta &copy </p>
+            </div>
+        </footer>
+    </body>
+</html>

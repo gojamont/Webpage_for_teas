@@ -1,0 +1,8 @@
+{
+    "name": "gojam/renatossodai",
+    "description": "šis projektas - tai svetainė, skirta \"Renatos Sodams\".",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {}
+}
