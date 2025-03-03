@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="HeatingOptimizer.MainWindow"
+        Title="Super Optimizing Power Heating System">
+    <StackPanel>
+    <!-- Adding a heading (label) to a project -->
+        <StackPanel Margin="20">
+            <TextBlock Margin="0 5" FontSize="18" FontWeight="Bold">File entry</TextBlock>
+            <TextBox Watermark="Enter the file path to the csv file"/>
+            <!-- adding a chart container (canvas) -->
+            </StackPanel>
+            <StackPanel Margin="20">
+            <!-- Adding a container for the buttons-->
+                <StackPanel>
+                    <Button></Button>
+                    <Button></Button>
+                    <Button></Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>
