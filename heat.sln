@@ -2,7 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "heat", "heat.csproj", "{5046614A-33C1-6796-8D19-5950ADC2AF0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatingOptimizer", "HeatingOptimizer\HeatingOptimizer.csproj", "{4049E16B-5CDE-FDEC-49BC-911874B35D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatingOptimizer.Tests", "HeatingOptimizer.Tests\HeatingOptimizer.Tests.csproj", "{5638FC20-4574-2D47-B61C-02AB704F37BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,15 +12,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5046614A-33C1-6796-8D19-5950ADC2AF0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5046614A-33C1-6796-8D19-5950ADC2AF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5046614A-33C1-6796-8D19-5950ADC2AF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5046614A-33C1-6796-8D19-5950ADC2AF0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4049E16B-5CDE-FDEC-49BC-911874B35D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4049E16B-5CDE-FDEC-49BC-911874B35D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4049E16B-5CDE-FDEC-49BC-911874B35D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4049E16B-5CDE-FDEC-49BC-911874B35D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5638FC20-4574-2D47-B61C-02AB704F37BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5638FC20-4574-2D47-B61C-02AB704F37BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5638FC20-4574-2D47-B61C-02AB704F37BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5638FC20-4574-2D47-B61C-02AB704F37BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {30A27166-81A0-41BD-AB17-9C28AA81B636}
+		SolutionGuid = {4255D2D6-25C4-4962-B054-080A1B876ED8}
 	EndGlobalSection
 EndGlobal

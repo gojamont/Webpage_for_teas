@@ -1,0 +1,72 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:MainWindow.UI"
+    xmlns:vms="using:HeatingOptimizer.ViewModels"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    x:DataType="vms:MainWindowViewModel"
+    x:Class="HeatingOptimizer.UI.MainWindow"
+    Title="Super Optimizing Power Heating System"
+    >
+
+    <Window.DataContext>
+        <vms:MainWindowViewModel />
+    </Window.DataContext>
+
+        <ScrollViewer HorizontalAlignment="Stretch">
+        <!-- Adding a heading (label) to a project -->
+        <StackPanel Margin="20" ScrollViewer.AllowAutoHide="True" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+            <TextBlock Margin="0 5" FontSize="18" FontWeight="Bold">File entry</TextBlock>
+            <TextBox Watermark="Enter the file path to the csv file" Text="{Binding InputText, Mode=TwoWay}"/>
+
+            <!-- Adding a chart container (canvas) -->
+            <StackPanel Margin="20">
+                <!-- Adding a container for the buttons-->
+                <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Click="LoadButton_Click" HorizontalAlignment="Stretch">Load</Button>
+                    <Button Margin="10" Click="BrowseFile">Browse file</Button>
+                    <Button Margin="10">Save</Button>
+                    <Button Margin="10">Edit</Button>
+
+                    <!-- Production Unit ListBox-->
+                    <ListBox x:Name="ProductionUnitsListBox"
+                        SelectionMode="Multiple,Toggle"
+                        ItemsSource="{Binding AllProductionUnits}" 
+                        SelectedItems="{Binding SelectedProductionUnits}, Mode=TwoWay">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        </ListBox>
+
+                    <!-- Adding the dropdown for the options -->
+                     <!-- SelectedItem="{Binding SelectedOption}" -->
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <ComboBox SelectedIndex="{Binding SelectedIndex}" Margin="10">
+                            <ComboBoxItem>Cheapest</ComboBoxItem>
+                            <ComboBoxItem>Less CO2 Emissions</ComboBoxItem>
+                            <ComboBoxItem>Less Fuel Consumption</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <Button Margin="10" Click="GenerateButton_Click">Generate</Button>
+
+                </WrapPanel>
+
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <lvc:CartesianChart
+                        Width="800"
+                        Height="400"
+                        Series="{Binding Series}"
+                        XAxes="{Binding XAxes}"
+                        YAxes="{Binding YAxes}"
+                        ZoomMode="X"/>
+                </StackPanel>
+            </StackPanel>
+    </StackPanel>
+    </ScrollViewer>
+</Window>
